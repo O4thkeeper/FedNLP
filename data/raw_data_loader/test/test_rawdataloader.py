@@ -7,16 +7,16 @@ import sys
 # add the FedML root directory to the python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), "../../../")))
 import data.raw_data_loader.news_20.data_loader
-import data.raw_data_loader.AGNews.data_loader
-import data.raw_data_loader.CNN_Dailymail.data_loader
-import data.raw_data_loader.CornellMovieDialogue.data_loader
-import data.raw_data_loader.SemEval2010Task8.data_loader
-import data.raw_data_loader.Sentiment140.data_loader
-import data.raw_data_loader.SQuAD_1_1.data_loader
-import data.raw_data_loader.SST_2.data_loader
-import data.raw_data_loader.W_NUT.data_loader
-import data.raw_data_loader.wikiner.data_loader
-import data.raw_data_loader.WMT.data_loader
+# import data.raw_data_loader.AGNews.data_loader
+# import data.raw_data_loader.CNN_Dailymail.data_loader
+# import data.raw_data_loader.CornellMovieDialogue.data_loader
+# import data.raw_data_loader.SemEval2010Task8.data_loader
+# import data.raw_data_loader.Sentiment140.data_loader
+# import data.raw_data_loader.SQuAD_1_1.data_loader
+# import data.raw_data_loader.SST_2.data_loader
+# import data.raw_data_loader.W_NUT.data_loader
+# import data.raw_data_loader.wikiner.data_loader
+# import data.raw_data_loader.WMT.data_loader
 
 
 def add_args(parser):

@@ -47,7 +47,6 @@ def partition_class_samples_with_dirichlet_distribution(
 
 
 def main():
-
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -113,7 +112,7 @@ def main():
     min_size_train = 0
 
     print("start dirichlet distribution")
-    while min_size_test < 1 or min_size_train < 1:
+    while min_size_test < 10 or min_size_train < 10:
         partition_result_train = [[] for _ in range(client_num)]
         partition_result_test = [[] for _ in range(client_num)] 
         train_n = len(train_index_list)
@@ -123,7 +122,10 @@ def main():
             train_index_list)
         partition_result_test = partition_class_samples_with_dirichlet_distribution(
             test_n, beta, client_num, partition_result_test,
-            test_index_list) 
+            test_index_list)
+        min_size_train = min([len(i) for i in partition_result_train])
+        min_size_test = min([len(i) for i in partition_result_test])
+
     print("minsize of the train data",
           min([len(i) for i in partition_result_train]))
     print("minsize of the test data",
